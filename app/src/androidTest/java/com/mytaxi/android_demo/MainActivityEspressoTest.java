@@ -42,7 +42,7 @@ public class MainActivityEspressoTest {
     @Test
     public void testSearchAndCall() throws InterruptedException {
         String driverName = "Sarah Scott";
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         onView(withId(R.id.searchContainer)).check(matches(isDisplayed()));
         onView(withId(R.id.textSearch)).perform(typeText("sa"), closeSoftKeyboard());
         Thread.sleep(3000);
