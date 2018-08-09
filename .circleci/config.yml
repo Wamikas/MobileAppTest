@@ -35,10 +35,10 @@ jobs:
             # unlock the emulator screen
             sleep 30
             adb shell input keyevent 82
-            wget http://imgur.com/tools/imgurbash.sh
-            chmod a+x imgurbash.sh
-            adb shell screencap -p | sed 's/\r$//' > bootscreen.png
-            ./imgurbash.sh bootscreen.png
+            wget https://github.com/jomo/imgur-screenshot/releases/download/v1.7.3/imgur-screenshot.sh
+            chmod a+x imgur-screenshot.sh
+            adb shell screencap -p | sed 's/\r$//' > andbootscreen.png
+            ./imgur-screenshot.sh andbootscreen.png
       - run:
           name: Run EspressoTests
           command: ./gradlew connectedAndroidTest
