@@ -38,11 +38,6 @@ public class MainActivityEspressoTest {
 //    @Before
 //    public void login() {
 //
-//        String username="crazydog335";
-//        String password="venture";
-//        onView(withId(R.id.edt_username)).perform(typeText(username), closeSoftKeyboard());
-//        onView(withId(R.id.edt_password)).perform(typeText(password), closeSoftKeyboard());
-//        onView(withId(R.id.btn_login)).perform(click());
 //        System.console().writer().println("Before setup ran");
 //
 //    }
@@ -55,7 +50,6 @@ public class MainActivityEspressoTest {
         onView(withId(R.id.edt_username)).perform(typeText(username), closeSoftKeyboard());
         onView(withId(R.id.edt_password)).perform(typeText(password), closeSoftKeyboard());
         onView(withId(R.id.btn_login)).perform(click());
-        System.console().writer().println("Before setup ran");
         Thread.sleep(3000);
         onView(withId(R.id.textSearch)).perform(typeText("sa"), closeSoftKeyboard()).check(matches(isDisplayed()));
         onView(withText(driverName)).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView()))))
