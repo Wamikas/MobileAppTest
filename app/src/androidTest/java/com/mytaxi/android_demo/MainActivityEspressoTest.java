@@ -35,13 +35,6 @@ public class MainActivityEspressoTest {
             GrantPermissionRule.grant(android.Manifest.permission.ACCESS_FINE_LOCATION);
 
 
-//    @Before
-//    public void login() {
-//
-//        System.console().writer().println("Before setup ran");
-//
-//    }
-
     @Test
     public void testSearchAndCall() throws InterruptedException {
         String driverName = "Sarah Scott";
@@ -55,8 +48,6 @@ public class MainActivityEspressoTest {
         onView(withText(driverName)).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView()))))
        .perform(click());
         onView(withId(R.id.fab)).perform(click());
-//        onView(withId(R.id.drawer_layout)).perform(open());
-//        onView(withText("Logout")).perform(click());
 
     }
 
